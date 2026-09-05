@@ -13,17 +13,17 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: '¿Acertaron los escenarios del futuro cyber?',
-  description: 'Auditoría retrospectiva de 120 predicciones explícitas en conferencias de ciberseguridad, 2005–2018.',
+  title: 'Cyber Predictions Audit',
+  description: 'A retrospective audit of 120 explicit predictions from cybersecurity conferences, 2005–2018.',
   openGraph: {
-    title: '¿Acertaron los escenarios del futuro cyber?',
-    description: '120 predicciones · 2005–2018',
+    title: 'Cyber Predictions Audit',
+    description: '120 predictions · 2005–2018',
     images: ['/og.png'],
   },
   twitter: {
     card: 'summary_large_image',
-    title: '¿Acertaron los escenarios del futuro cyber?',
-    description: '120 predicciones · 2005–2018',
+    title: 'Cyber Predictions Audit',
+    description: '120 predictions · 2005–2018',
     images: ['/og.png'],
   },
 };
@@ -34,7 +34,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="es">
+    <html lang="en">
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
