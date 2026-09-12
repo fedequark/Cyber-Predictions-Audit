@@ -5,6 +5,7 @@ Material de investigación para **“¿Acertaron los escenarios del futuro cyber
 - **Sitio público:** [cpa.federicopacheco.com](https://cpa.federicopacheco.com/)
 - **Versión editorial vigente:** 1.1 (24 de agosto de 2026)
 - **Estado académico:** resultados cerrados; validación independiente pendiente.
+- **Citación:** metadatos listos en `CITATION.cff`; DOI pendiente de depósito público.
 
 ## Resultados principales
 

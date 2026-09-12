@@ -1,0 +1,21 @@
+cff-version: 1.2.0
+message: "Si utiliza este conjunto de datos o sus resultados, cite esta versión."
+title: "Cyber Predictions Audit: auditoría retrospectiva de predicciones explícitas en conferencias de ciberseguridad, 2005–2018"
+type: dataset
+authors:
+  - family-names: Pacheco
+    given-names: Federico
+version: "1.1"
+date-released: 2026-09-12
+repository-code: "https://github.com/fedequark/Cyber-Predictions-Audit"
+url: "https://cpa.federicopacheco.com/"
+abstract: >-
+  Corpus auditable de 120 predicciones explícitas presentadas en conferencias de
+  ciberseguridad entre 2005 y 2018, con evaluación retrospectiva de sus desenlaces,
+  documentación metodológica y artefactos reproducibles.
+keywords:
+  - cybersecurity
+  - forecasting
+  - retrospective audit
+  - conference research
+  - reproducibility
