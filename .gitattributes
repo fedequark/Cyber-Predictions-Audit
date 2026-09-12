@@ -1,0 +1,12 @@
+* text=auto eol=lf
+*.csv text eol=lf
+*.md text eol=lf
+*.html text eol=lf
+*.css text eol=lf
+*.js text eol=lf
+*.mjs text eol=lf
+*.py text eol=lf
+*.json text eol=lf
+*.jsonc text eol=lf
+work/registro_extraccion_congelado_v1.0.csv -text
+work/orden_seleccion_s3_v0.2.csv -text
