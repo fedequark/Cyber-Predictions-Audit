@@ -4,6 +4,7 @@
   "private": true,
   "scripts": {
     "build:site": "node scripts/build-site.mjs",
-    "check:research": "python scripts/generar_paquete_doble_codificacion.py"
+    "check:research": "python scripts/generar_paquete_doble_codificacion.py",
+    "deploy:cloudflare": "npm run build:site && npx wrangler@latest pages deploy dist --project-name cyber-predictions-audit --branch main"
   }
 }

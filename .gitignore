@@ -3,9 +3,6 @@
 
 !.gitignore
 !.gitattributes
-!.openai/
-.openai/*
-!.openai/hosting.json
 !README.md
 !CITATION.cff
 !package.json
@@ -52,4 +49,5 @@ site/*
 !site/favicon.svg
 
 dist/
+.wrangler/
 work/doble_codificacion/

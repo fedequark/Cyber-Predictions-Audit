@@ -3,6 +3,7 @@
 Material de investigación para **“¿Acertaron los escenarios del futuro cyber? Auditoría retrospectiva de predicciones explícitas en conferencias de ciberseguridad, 2005–2018”**.
 
 - **Sitio público:** [cpa.federicopacheco.com](https://cpa.federicopacheco.com/)
+- **Alojamiento:** Cloudflare Pages (`cyber-predictions-audit`).
 - **Versión editorial vigente:** 1.1 (24 de agosto de 2026)
 - **Estado académico:** resultados cerrados; validación independiente pendiente.
 - **Citación:** metadatos listos en `CITATION.cff`; DOI pendiente de depósito público.
@@ -40,6 +41,12 @@ npm run build:site
 ```
 
 El resultado se genera en `dist/` e incluye el sitio, los documentos, los tres CSV de trabajo y versiones HTML legibles del paper y del anexo.
+
+Para desplegar la salida estática en Cloudflare Pages:
+
+```text
+npm run deploy:cloudflare
+```
 
 Para preparar la validación independiente:
 
