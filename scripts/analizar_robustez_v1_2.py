@@ -234,6 +234,9 @@ def main() -> None:
             {"metric": f"logit_ci_low::{row['term']}", "value": row["ci_low"], "denominator": n, "analysis_status": "exploratory"},
             {"metric": f"logit_ci_high::{row['term']}", "value": row["ci_high"], "denominator": n, "analysis_status": "exploratory"},
         ])
+    for row in metric_rows:
+        if isinstance(row["value"], float):
+            row["value"] = f"{row['value']:.12g}"
     write_csv(METRICS, metric_rows, ["metric", "value", "denominator", "analysis_status"])
 
     source_inventory: dict[tuple[str, str], dict[str, object]] = {}
