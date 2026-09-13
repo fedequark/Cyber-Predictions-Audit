@@ -25,6 +25,10 @@ for (const name of [
   'registro_extraccion_congelado_v1.0.csv',
   'evaluacion_desenlaces_v1.0.csv',
   'orden_seleccion_s3_v0.2.csv',
+  'analisis_derivado_v1.2.csv',
+  'metricas_robustez_v1.2.csv',
+  'inventario_fuentes_v1.2.csv',
+  'registro_candidatos_excluidos_template_v1.2.csv',
 ]) {
   const source = join(root, 'work', name);
   const target = join(dist, 'work', name);

@@ -9,6 +9,7 @@
   <link rel="icon" href="/favicon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="/utilities.css">
   <link rel="stylesheet" href="/styles.css">
+  <link rel="stylesheet" href="/robustness.css">
   <script src="/app.js" defer></script>
 </head>
 <body>
@@ -18,6 +19,7 @@
     <nav aria-label="Navegación principal">
       <a href="#hallazgo" data-es="Hallazgo" data-en="Finding">Hallazgo</a>
       <a href="#metodo" data-es="Método" data-en="Method">Método</a>
+      <a href="#robustez" data-es="Robustez" data-en="Robustness">Robustez</a>
       <a href="#explorador" data-es="Explorador" data-en="Explorer">Explorador</a>
       <a href="#documentos" data-es="Documentos" data-en="Documents">Documentos</a>
     </nav>
@@ -69,7 +71,19 @@
         <article><b>03</b><h3 data-es="Contrastar" data-en="Check">Contrastar</h3><p data-es="Fuentes oficiales, técnicas y contemporáneas se aplicaron a cada regla." data-en="Official, technical, and contemporary sources were applied to each rule.">Fuentes oficiales, técnicas y contemporáneas se aplicaron a cada regla.</p></article>
         <article><b>04</b><h3 data-es="Conservar la duda" data-en="Keep the doubt">Conservar la duda</h3><p data-es="Sin evidencia suficiente, el caso quedó indeterminado." data-en="Without sufficient evidence, the case remained indeterminate.">Sin evidencia suficiente, el caso quedó indeterminado.</p></article>
       </div>
-      <aside class="warning"><strong data-es="Validación pendiente:" data-en="Pending validation:">Validación pendiente:</strong> <span data-es="un segundo codificador independiente debe completar la muestra ciega. La versión 1.1 declara esta desviación en vez de ocultarla." data-en="an independent second coder must complete the blinded sample. Version 1.1 declares this deviation rather than hiding it.">un segundo codificador independiente debe completar la muestra ciega. La versión 1.1 declara esta desviación en vez de ocultarla.</span></aside>
+      <aside class="warning"><strong data-es="Validación pendiente:" data-en="Pending validation:">Validación pendiente:</strong> <span data-es="un segundo codificador independiente debe completar la muestra ciega. La versión 1.2 mantiene esta desviación visible; no forma parte de la actualización actual." data-en="an independent second coder must complete the blinded sample. Version 1.2 keeps this deviation visible; it is not part of the current update.">un segundo codificador independiente debe completar la muestra ciega. La versión 1.2 mantiene esta desviación visible; no forma parte de la actualización actual.</span></aside>
+    </section>
+
+    <section id="robustez" class="band robustness">
+      <div class="eyebrow" data-es="ROBUSTEZ · ANÁLISIS v1.2" data-en="ROBUSTNESS · v1.2 ANALYSIS">ROBUSTEZ · ANÁLISIS v1.2</div>
+      <h2 data-es="El 60,7% es un punto de partida, no un skill score." data-en="60.7% is a starting point, not a skill score.">El 60,7% es un punto de partida, no un <em>skill score</em>.</h2>
+      <div class="robust-grid">
+        <article><strong>45,0–70,8%</strong><span data-es="banda extrema al reasignar los 31 indeterminados" data-en="extreme band after reallocating 31 indeterminate cases">banda extrema al reasignar los 31 indeterminados</span></article>
+        <article><strong>47,0–72,1%</strong><span data-es="bootstrap exploratorio por sesión" data-en="exploratory session bootstrap">bootstrap exploratorio por sesión</span></article>
+        <article><strong>73 / 120</strong><span data-es="casos de la familia Security Nightmares" data-en="cases from the Security Nightmares family">casos de la familia <em>Security Nightmares</em></span></article>
+        <article><strong>22,5</strong><span data-es="sesiones efectivas según concentración HHI" data-en="effective sessions under HHI concentration">sesiones efectivas según concentración HHI</span></article>
+      </div>
+      <p class="robust-note" data-es="Una regla trivial que clasifica todo como “cumplida” también obtiene 60,7% entre resolubles. Sin probabilidades ni alternativas, la tasa no demuestra discriminación. El proxy exploratorio de dificultad cae de 73,3% en casos bajos a 41,4% en altos." data-en="A trivial rule labeling everything fulfilled also gets 60.7% among resolvable cases. Without probabilities or alternatives, the rate does not demonstrate discrimination. The exploratory difficulty proxy falls from 73.3% in low cases to 41.4% in high cases.">Una regla trivial que clasifica todo como “cumplida” también obtiene 60,7% entre resolubles. Sin probabilidades ni alternativas, la tasa no demuestra discriminación. El proxy exploratorio de dificultad cae de 73,3% en casos bajos a 41,4% en altos.</p>
     </section>
 
     <section id="explorador" class="explorer band blue">
@@ -93,16 +107,18 @@
       <div class="eyebrow" data-es="DATOS Y DOCUMENTOS" data-en="DATA AND DOCUMENTS">DATOS Y DOCUMENTOS</div>
       <h2 data-es="La landing es una puerta de entrada, no un sustituto del registro." data-en="The landing page is a doorway, not a replacement for the record.">La landing es una puerta de entrada, no un sustituto del registro.</h2>
       <div class="doc-grid">
-        <a href="/paper.html"><strong data-es="Leer el paper v1.1" data-en="Read paper v1.1">Leer el paper v1.1</strong><span data-es="Metodología, resultados, límites y referencias" data-en="Methods, results, limits, and references">Metodología, resultados, límites y referencias</span></a>
+        <a href="/paper.html"><strong data-es="Leer el paper v1.2" data-en="Read paper v1.2">Leer el paper v1.2</strong><span data-es="Incertidumbre, baselines, concentración y modelo exploratorio" data-en="Uncertainty, baselines, concentration, and exploratory model">Incertidumbre, baselines, concentración y modelo exploratorio</span></a>
         <a href="/appendix.html"><strong data-es="Abrir el anexo" data-en="Open the appendix">Abrir el anexo</strong><span data-es="Tablas derivadas y claves de casos" data-en="Derived tables and case keys">Tablas derivadas y claves de casos</span></a>
         <a href="/work/registro_extraccion_congelado_v1.0.csv" download><strong data-es="Corpus congelado" data-en="Frozen corpus">Corpus congelado</strong><span>CSV · SHA-256 323739E7…</span></a>
         <a href="/work/evaluacion_desenlaces_v1.0.csv" download><strong data-es="Evaluación de desenlaces" data-en="Outcome evaluation">Evaluación de desenlaces</strong><span>CSV · SHA-256 B3CE8AD4…</span></a>
         <a href="/documents/preregistracion_consolidada_v0.2.md"><strong data-es="Preregistro" data-en="Preregistration">Preregistro</strong><span data-es="Criterios y regla de parada" data-en="Criteria and stopping rule">Criterios y regla de parada</span></a>
-        <a href="/documents/auditoria_critica_integral_v1.1.md"><strong data-es="Auditoría crítica" data-en="Critical audit">Auditoría crítica</strong><span data-es="Desviaciones y criterio de cierre" data-en="Deviations and completion criteria">Desviaciones y criterio de cierre</span></a>
+        <a href="/documents/analisis_robustez_y_representatividad_v1.2.md"><strong data-es="Robustez y representatividad" data-en="Robustness and representativeness">Robustez y representatividad</strong><span data-es="Métodos, proxies y resultados reproducibles" data-en="Reproducible methods, proxies, and results">Métodos, proxies y resultados reproducibles</span></a>
+        <a href="/work/analisis_derivado_v1.2.csv" download><strong data-es="Capa analítica v1.2" data-en="v1.2 analytical layer">Capa analítica v1.2</strong><span data-es="CSV derivado; los originales siguen intactos" data-en="Derived CSV; original records remain intact">CSV derivado; los originales siguen intactos</span></a>
+        <a href="/work/inventario_fuentes_v1.2.csv" download><strong data-es="Inventario de fuentes" data-en="Source inventory">Inventario de fuentes</strong><span data-es="218 localizadores y hashes de cápsulas" data-en="218 locators and capsule hashes">218 localizadores y hashes de cápsulas</span></a>
       </div>
     </section>
   </main>
 
-  <footer><span>Cyber Predictions Audit</span><span data-es="Versión 1.1 · septiembre de 2026" data-en="Version 1.1 · September 2026">Versión 1.1 · septiembre de 2026</span></footer>
+  <footer><span>Cyber Predictions Audit</span><span data-es="Versión 1.2 · septiembre de 2026" data-en="Version 1.2 · September 2026">Versión 1.2 · septiembre de 2026</span></footer>
 </body>
 </html>

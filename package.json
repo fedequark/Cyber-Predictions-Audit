@@ -1,10 +1,11 @@
 {
   "name": "cyber-predictions-audit",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "private": true,
   "scripts": {
     "build:site": "node scripts/build-site.mjs",
-    "check:research": "python scripts/generar_paquete_doble_codificacion.py",
+    "analyze:research": "python scripts/analizar_robustez_v1_2.py",
+    "check:research": "python scripts/analizar_robustez_v1_2.py && node scripts/build-site.mjs",
     "deploy:cloudflare": "npm run build:site && npx wrangler@latest pages deploy dist --project-name cyber-predictions-audit --branch main"
   }
 }

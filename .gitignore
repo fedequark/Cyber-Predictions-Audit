@@ -20,18 +20,29 @@ outputs/*
 !outputs/anexo_metodologico_y_trazabilidad_v1.1.md
 !outputs/auditoria_critica_integral_v1.1.md
 !outputs/plan_validacion_independiente_v1.1.md
+!outputs/paper_auditoria_predicciones_cyber_v1.2.md
+!outputs/anexo_metodologico_y_trazabilidad_v1.2.md
+!outputs/analisis_robustez_y_representatividad_v1.2.md
+!outputs/codebook_proxies_v1.2.md
+!outputs/protocolo_preservacion_fuentes_v1.2.md
+!outputs/nota_publicacion_v1.2.md
 
 !work/
 work/*
 !work/registro_extraccion_congelado_v1.0.csv
 !work/evaluacion_desenlaces_v1.0.csv
 !work/orden_seleccion_s3_v0.2.csv
+!work/analisis_derivado_v1.2.csv
+!work/metricas_robustez_v1.2.csv
+!work/inventario_fuentes_v1.2.csv
+!work/registro_candidatos_excluidos_template_v1.2.csv
 
 !scripts/
 scripts/*
 !scripts/build-site.mjs
 !scripts/generar_paquete_doble_codificacion.py
 !scripts/calcular_acuerdo.py
+!scripts/analizar_robustez_v1_2.py
 
 !site/
 site/*
@@ -47,6 +58,13 @@ site/*
 !site/sitemap.xml
 !site/_headers
 !site/favicon.svg
+!site/robustness.css
+
+!.github/
+.github/*
+!.github/workflows/
+.github/workflows/*
+!.github/workflows/research.yml
 
 dist/
 .wrangler/

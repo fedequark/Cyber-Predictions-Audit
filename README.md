@@ -4,7 +4,7 @@ Material de investigación para **“¿Acertaron los escenarios del futuro cyber
 
 - **Sitio público:** [cpa.federicopacheco.com](https://cpa.federicopacheco.com/)
 - **Alojamiento:** Cloudflare Pages (`cyber-predictions-audit`).
-- **Versión editorial vigente:** 1.1 (24 de agosto de 2026)
+- **Versión editorial vigente:** 1.2 (13 de septiembre de 2026)
 - **Estado académico:** resultados cerrados; validación independiente pendiente.
 - **Citación:** metadatos listos en `CITATION.cff`; DOI pendiente de depósito público.
 
@@ -13,11 +13,18 @@ Material de investigación para **“¿Acertaron los escenarios del futuro cyber
 - 120 predicciones con horizonte vencido.
 - 54 cumplidas, 35 incumplidas y 31 indeterminadas.
 - Tasa descriptiva entre los 89 casos resolubles: 60,7%.
+- IC Wilson descriptivo: 50,3–70,2%; extremos con indeterminados: 45,0–70,8%.
+- Bootstrap exploratorio por sesión: 47,0–72,1%.
+- La familia `Security Nightmares` concentra 73/120 casos.
 
 ## Contenido del repositorio
 
-- `outputs/paper_auditoria_predicciones_cyber_v1.1.md`: manuscrito vigente.
-- `outputs/anexo_metodologico_y_trazabilidad_v1.1.md`: tablas derivadas y correspondencia de identificadores.
+- `outputs/paper_auditoria_predicciones_cyber_v1.2.md`: manuscrito vigente.
+- `outputs/anexo_metodologico_y_trazabilidad_v1.2.md`: diseño de la capa derivada y trazabilidad.
+- `outputs/analisis_robustez_y_representatividad_v1.2.md`: incertidumbre, referencias base, concentración, proxies y modelo.
+- `outputs/codebook_proxies_v1.2.md`: reglas exactas de especificidad y dificultad exploratorias.
+- `outputs/protocolo_preservacion_fuentes_v1.2.md`: niveles de preservación completos y pendientes.
+- `outputs/nota_publicacion_v1.2.md`: paquete listo y decisiones editoriales pendientes.
 - `outputs/auditoria_critica_integral_v1.1.md`: estado de reproducibilidad y pendientes.
 - `outputs/plan_validacion_independiente_v1.1.md`: procedimiento para completar la segunda codificación.
 - `outputs/paper_auditoria_predicciones_cyber_v1.0.md`: manuscrito original preservado.
@@ -29,6 +36,10 @@ Material de investigación para **“¿Acertaron los escenarios del futuro cyber
 - `work/registro_extraccion_congelado_v1.0.csv`: corpus outcome-blind congelado.
 - `work/evaluacion_desenlaces_v1.0.csv`: evaluación de desenlaces.
 - `work/orden_seleccion_s3_v0.2.csv`: orden de selección documentado.
+- `work/analisis_derivado_v1.2.csv`: variables analíticas derivadas por predicción.
+- `work/metricas_robustez_v1.2.csv`: resultados numéricos y estado confirmatorio/exploratorio.
+- `work/inventario_fuentes_v1.2.csv`: 218 localizadores, claves y hashes de cápsulas textuales.
+- `work/registro_candidatos_excluidos_template_v1.2.csv`: esquema prospectivo; no imputa exclusiones pasadas.
 - `site/`: fuente estática reproducible del sitio público, con explorador fila por fila.
 - `scripts/`: construcción del sitio y herramientas de doble codificación.
 
@@ -40,7 +51,13 @@ Los hashes se calculan sobre los bytes canónicos publicados. El registro de ext
 npm run build:site
 ```
 
-El resultado se genera en `dist/` e incluye el sitio, los documentos, los tres CSV de trabajo y versiones HTML legibles del paper y del anexo.
+Para regenerar los análisis v1.2 y construir el sitio:
+
+```text
+npm run check:research
+```
+
+El resultado se genera en `dist/` e incluye el sitio, los documentos, los CSV canónicos y derivados, y versiones HTML legibles del paper y del anexo.
 
 Para desplegar la salida estática en Cloudflare Pages:
 
@@ -57,5 +74,10 @@ python scripts/generar_paquete_doble_codificacion.py
 El comando genera una muestra determinista de 30 desenlaces sin los juicios originales y una hoja conservadora con las 115 operacionalizaciones clase B. No puede reconstruir candidatos excluidos porque ese registro no forma parte del paquete publicado.
 
 El repositorio excluye deliberadamente videos, audios, dependencias descargadas,
-archivos temporales y copias locales de fuentes. Las tablas conservan las URL y
-los metadatos necesarios para identificar la evidencia utilizada.
+archivos temporales y copias locales de fuentes. La capa v1.2 añade un inventario
+de localizadores y hashes de las cápsulas textuales conservadas. No presenta esos
+hashes como copias de los recursos remotos.
+
+La publicación académica definitiva aún requiere que el autor elija licencia,
+visibilidad pública del repositorio y depósito con DOI. Esas decisiones no se
+infieren automáticamente porque cambian derechos y acceso.
