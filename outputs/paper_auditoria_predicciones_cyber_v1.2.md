@@ -132,9 +132,11 @@ Las conferencias estudiadas detectaron con frecuencia temas que luego importaron
 
 ## Declaraciones
 
-**Codificación:** un solo codificador; la validación independiente continúa pendiente.  
-**Preregistro:** interno, sin sello temporal externo previo.  
-**Financiación y conflictos:** deben completarse por la autoría antes de un envío.  
+**Codificación:** un solo codificador; la validación independiente continúa pendiente.
+
+**Preregistro:** interno, sin sello temporal externo previo.
+
+**Financiación y conflictos:** deben completarse por la autoría antes de un envío.
 **Ética:** análisis de materiales públicos; la revista deberá determinar si requiere declaración formal.
 
 ## Referencias

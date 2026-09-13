@@ -1,6 +1,6 @@
 # Análisis de robustez y representatividad v1.2
 
-**Fecha:** 13 de septiembre de 2026  
+**Fecha:** 13 de septiembre de 2026
 **Estado:** capa derivada post hoc. No modifica los registros congelados v1.0.
 
 ## 1. Incertidumbre y datos indeterminados
