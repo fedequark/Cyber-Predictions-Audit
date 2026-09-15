@@ -2,6 +2,40 @@
   background: #fff;
 }
 
+.hero.band {
+  padding-top: clamp(2rem, 4vw, 3.5rem);
+  padding-bottom: clamp(2rem, 4vw, 3.5rem);
+}
+
+.hero .kicker {
+  margin-top: .7rem;
+  font-size: 1.15rem;
+}
+
+.hero-grid {
+  gap: clamp(1.5rem, 3vw, 3rem);
+  align-items: center;
+}
+
+.hero h1 {
+  margin-bottom: .85rem;
+  font-size: clamp(2.7rem, 4.2vw, 4.4rem);
+  line-height: 1.04;
+}
+
+.hero .lead {
+  margin-bottom: 0;
+  font-size: 1rem;
+}
+
+.hero .scope div {
+  padding: .55rem 0;
+}
+
+.hero .scope dt {
+  font-size: 1.9rem;
+}
+
 .robustness > h2 {
   max-width: 900px;
 }
@@ -106,6 +140,28 @@ footer a {
 }
 
 @media (max-width: 800px) {
+  .hero-grid {
+    gap: 1.25rem;
+  }
+
+  .hero h1 {
+    font-size: clamp(2.5rem, 8vw, 3.6rem);
+  }
+
+  .hero .scope {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: .65rem;
+  }
+
+  .hero .scope div {
+    display: block;
+  }
+
+  .hero .scope dd {
+    font-size: .75rem;
+  }
+
   .controls,
   .case-grid {
     grid-template-columns: 1fr;
@@ -121,6 +177,23 @@ footer a {
 }
 
 @media (max-width: 480px) {
+  .hero.band {
+    padding-top: 1.5rem;
+    padding-bottom: 2rem;
+  }
+
+  .hero h1 {
+    font-size: clamp(2.35rem, 10vw, 3rem);
+  }
+
+  .hero .scope {
+    gap: .4rem;
+  }
+
+  .hero .scope dt {
+    font-size: 1.6rem;
+  }
+
   .robust-grid {
     grid-template-columns: 1fr;
   }

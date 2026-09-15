@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "build:site": "node scripts/build-site.mjs",
-    "analyze:research": "python scripts/analizar_robustez_v1_2.py && python scripts/diagnosticos_adicionales_v1_3.py && python scripts/auditar_evidencia_y_muestra_v1_4.py && python scripts/auditar_operacionalizacion_v1_4.py",
+    "analyze:research": "python scripts/analizar_robustez_v1_2.py && python scripts/diagnosticos_adicionales_v1_3.py && python scripts/auditar_evidencia_y_muestra_v1_4.py && python scripts/auditar_operacionalizacion_v1_4.py && python scripts/seguimiento_enlaces_v1_4a.py",
     "check:research": "npm run analyze:research && python scripts/puntuar_replica_prospectiva_v1_4.py --self-test && python scripts/puntuar_replica_prospectiva_v1_4.py && node scripts/build-site.mjs",
     "deploy:cloudflare": "npm run build:site && npx wrangler@latest pages deploy dist --project-name cyber-predictions-audit --branch main"
   }

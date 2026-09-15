@@ -43,6 +43,7 @@ outputs/*
 !outputs/protocolo_replica_prospectiva_operativo_v1.4.md
 !outputs/plan_deposito_doi_y_preregistro_v1.4.md
 !outputs/nota_revision_focal_caso_p0_v1.4.md
+!outputs/seguimiento_documental_v1.4a.md
 
 !work/
 work/*
@@ -62,6 +63,7 @@ work/*
 !work/revision_compromiso_y_operacionalizacion_v1.4.csv
 !work/tarjeta_pronostico_prospectivo_template_v1.4.csv
 !work/alternativas_enlaces_fuentes_v1.4.csv
+!work/seguimiento_enlaces_fuentes_v1.4a.csv
 
 !scripts/
 scripts/*
@@ -74,6 +76,7 @@ scripts/*
 !scripts/comprobar_enlaces_fuentes_v1_4.py
 !scripts/auditar_operacionalizacion_v1_4.py
 !scripts/puntuar_replica_prospectiva_v1_4.py
+!scripts/seguimiento_enlaces_v1_4a.py
 
 !site/
 site/*

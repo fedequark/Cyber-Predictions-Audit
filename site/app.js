@@ -9,6 +9,7 @@ let records = [];
 let visible = 12;
 let sourceChecks = new Map();
 let sourceAlternatives = new Map();
+let sourceCandidates = new Map();
 
 function parseCsv(text) {
   const rows = [];
@@ -60,7 +61,14 @@ function evidenceLine(label, url, role) {
   const alternativeLink = alternative
     ? `<span class="source-alternative">${link(alternative.alternate_url, language === 'es' ? 'Alternativa oficial del orden S3 (HTTP 200)' : 'Official S3-order alternative (HTTP 200)')}</span>`
     : '';
-  return `<div><strong>${label}:</strong> ${link(url, language === 'es' ? 'Abrir fuente original' : 'Open original source') || `<span>${language === 'es' ? 'no registrada' : 'not recorded'}</span>`}<span class="source-check">${availability}</span>${alternativeLink}</div>`;
+  const candidate = sourceCandidates.get(`${role}|${url}`);
+  const candidateLabel = candidate?.candidate_relation === 'same_release_publisher_archive'
+    ? (language === 'es' ? 'Archivo oficial del mismo comunicado (HTTP 200)' : 'Official archive of the same release (HTTP 200)')
+    : (language === 'es' ? 'Guía oficial relacionada, no idéntica (HTTP 200)' : 'Related official guidance, not identical (HTTP 200)');
+  const candidateLink = candidate && !alternative
+    ? `<span class="source-alternative">${link(candidate.publisher_candidate_url, candidateLabel)}</span>`
+    : '';
+  return `<div><strong>${label}:</strong> ${link(url, language === 'es' ? 'Abrir fuente original' : 'Open original source') || `<span>${language === 'es' ? 'no registrada' : 'not recorded'}</span>`}<span class="source-check">${availability}</span>${alternativeLink}${candidateLink}</div>`;
 }
 function renderCard(row) {
   const isSpanish = language === 'es';
@@ -95,6 +103,8 @@ function renderCard(row) {
         <p class="meta">${isSpanish ? 'El estado HTTP es una comprobación de encabezados; no prueba validez ni preservación del contenido.' : 'HTTP status is a headers-only check; it does not prove validity or preservation.'}</p>
         <p><strong>${isSpanish ? 'Revisión pendiente' : 'Pending review'}:</strong> ${escapeHtml(row.review_action || '—')} (${escapeHtml(row.review_status || 'not_started')})</p>
         ${row.review_note_url?.startsWith('/documents/') ? `<p><a href="${escapeHtml(row.review_note_url)}">${isSpanish ? 'Leer búsqueda focal inicial' : 'Read initial focused search'}</a></p>` : ''}
+        ${['39-CCC-2006-011-06', '31-VB-2016-P01-10', '34-CCC-2013-034-14'].includes(row.prediction_key)
+          ? `<p><a href="/documents/seguimiento_documental_v1.4a.md">${isSpanish ? 'Leer seguimiento documental v1.4a' : 'Read documentary follow-up v1.4a'}</a></p>` : ''}
         ${link(challengeLink(row.prediction_key), isSpanish ? 'Impugnar esta evidencia en GitHub' : 'Challenge this evidence on GitHub')}
       </div></div>
     </details></article>`;
@@ -127,17 +137,19 @@ async function loadCsv(path) {
 }
 async function load() {
   try {
-    const [extraction, outcomes, triage, operationalization, checks, alternatives] = await Promise.all([
+    const [extraction, outcomes, triage, operationalization, checks, alternatives, queue] = await Promise.all([
       loadCsv('/work/registro_extraccion_congelado_v1.0.csv'),
       loadCsv('/work/evaluacion_desenlaces_v1.0.csv'),
       loadCsv('/work/triage_evidencia_v1.4.csv'),
       loadCsv('/work/revision_compromiso_y_operacionalizacion_v1.4.csv'),
       loadCsv('/work/estado_enlaces_fuentes_2026-09-15.csv'),
       loadCsv('/work/alternativas_enlaces_fuentes_v1.4.csv'),
+      loadCsv('/work/seguimiento_enlaces_fuentes_v1.4a.csv'),
     ]);
     if (extraction.length !== 120 || outcomes.length !== 120 || triage.length !== 120 || operationalization.length !== 120) throw Error('Corpus incompleto');
     sourceChecks = new Map(checks.map(row => [`${row.source_role}|${row.url}`, row]));
     sourceAlternatives = new Map(alternatives.map(row => [`${row.source_role}|${row.original_url}`, row]));
+    sourceCandidates = new Map(queue.filter(row => row.publisher_candidate_url).map(row => [`${row.source_role}|${row.original_url}`, row]));
     const byExtraction = new Map(extraction.map(row => [keyOf(row), row]));
     const byTriage = new Map(triage.map(row => [row.prediction_key, row]));
     const byOperation = new Map(operationalization.map(row => [row.prediction_key, row]));

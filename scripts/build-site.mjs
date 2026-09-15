@@ -43,6 +43,7 @@ for (const name of [
   'revision_compromiso_y_operacionalizacion_v1.4.csv',
   'tarjeta_pronostico_prospectivo_template_v1.4.csv',
   'alternativas_enlaces_fuentes_v1.4.csv',
+  'seguimiento_enlaces_fuentes_v1.4a.csv',
 ]) {
   const source = join(root, 'work', name);
   const target = join(dist, 'work', name);
