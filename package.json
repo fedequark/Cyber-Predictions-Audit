@@ -1,6 +1,6 @@
 {
   "name": "cyber-predictions-audit",
-  "version": "1.5.0",
+  "version": "1.6.0",
   "private": true,
   "scripts": {
     "build:site": "node scripts/build-site.mjs",
