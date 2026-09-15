@@ -21,6 +21,11 @@ for (const name of await readdir(join(root, 'outputs'))) {
   }
 }
 
+for (const name of ['RIGHTS.md', 'LICENSE-DATA.md', 'LICENSE']) {
+  const content = await readFile(join(root, name), 'utf8');
+  await writeFile(join(dist, 'documents', name), content.replace(/\r\n/g, '\n'), 'utf8');
+}
+
 for (const name of [
   'registro_extraccion_congelado_v1.0.csv',
   'evaluacion_desenlaces_v1.0.csv',
@@ -29,6 +34,8 @@ for (const name of [
   'metricas_robustez_v1.2.csv',
   'inventario_fuentes_v1.2.csv',
   'registro_candidatos_excluidos_template_v1.2.csv',
+  'influencia_sesiones_v1.3.csv',
+  'escenarios_indeterminados_v1.3.csv',
 ]) {
   const source = join(root, 'work', name);
   const target = join(dist, 'work', name);

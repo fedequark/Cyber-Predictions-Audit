@@ -40,6 +40,10 @@
   margin-top: 2rem;
 }
 
+footer a {
+  color: #dce4ec;
+}
+
 @media (max-width: 800px) {
   .robust-grid {
     grid-template-columns: 1fr 1fr;

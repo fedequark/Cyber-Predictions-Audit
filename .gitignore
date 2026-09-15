@@ -5,6 +5,9 @@
 !.gitattributes
 !README.md
 !CITATION.cff
+!LICENSE
+!LICENSE-DATA.md
+!RIGHTS.md
 !package.json
 !wrangler.jsonc
 
@@ -26,6 +29,11 @@ outputs/*
 !outputs/codebook_proxies_v1.2.md
 !outputs/protocolo_preservacion_fuentes_v1.2.md
 !outputs/nota_publicacion_v1.2.md
+!outputs/paper_auditoria_predicciones_cyber_v1.3.md
+!outputs/anexo_metodologico_y_trazabilidad_v1.3.md
+!outputs/diagnosticos_adicionales_v1.3.md
+!outputs/protocolo_replica_prospectiva_v1.3.md
+!outputs/auditoria_preapertura_repo_v1.3.md
 
 !work/
 work/*
@@ -36,6 +44,8 @@ work/*
 !work/metricas_robustez_v1.2.csv
 !work/inventario_fuentes_v1.2.csv
 !work/registro_candidatos_excluidos_template_v1.2.csv
+!work/influencia_sesiones_v1.3.csv
+!work/escenarios_indeterminados_v1.3.csv
 
 !scripts/
 scripts/*
@@ -43,6 +53,7 @@ scripts/*
 !scripts/generar_paquete_doble_codificacion.py
 !scripts/calcular_acuerdo.py
 !scripts/analizar_robustez_v1_2.py
+!scripts/diagnosticos_adicionales_v1_3.py
 
 !site/
 site/*
@@ -59,6 +70,7 @@ site/*
 !site/_headers
 !site/favicon.svg
 !site/robustness.css
+!site/rights.html
 
 !.github/
 .github/*

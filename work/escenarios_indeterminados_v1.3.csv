@@ -1,0 +1,6 @@
+indeterminate_resolved_as_success,indeterminate_resolved_as_failure,fulfilled_total,corpus_total,rate_all_120,analysis_status
+0,31,54,120,0.45,exploratory_counterfactual_not_recoding
+7,24,61,120,0.508333333333,exploratory_counterfactual_not_recoding
+16,15,70,120,0.583333333333,exploratory_counterfactual_not_recoding
+24,7,78,120,0.65,exploratory_counterfactual_not_recoding
+31,0,85,120,0.708333333333,exploratory_counterfactual_not_recoding

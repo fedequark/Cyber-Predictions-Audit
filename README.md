@@ -4,9 +4,10 @@ Material de investigación para **“¿Acertaron los escenarios del futuro cyber
 
 - **Sitio público:** [cpa.federicopacheco.com](https://cpa.federicopacheco.com/)
 - **Alojamiento:** Cloudflare Pages (`cyber-predictions-audit`).
-- **Versión editorial vigente:** 1.2 (13 de septiembre de 2026)
+- **Versión editorial vigente:** 1.3 (15 de septiembre de 2026)
 - **Estado académico:** resultados cerrados; validación independiente pendiente.
 - **Citación:** metadatos listos en `CITATION.cff`; DOI pendiente de depósito público.
+- **Licencias:** MIT para software; CC BY 4.0 para aportes originales de investigación y base de datos. Las citas literales y recursos de terceros quedan excluidos; ver `RIGHTS.md`.
 
 ## Resultados principales
 
@@ -16,11 +17,18 @@ Material de investigación para **“¿Acertaron los escenarios del futuro cyber
 - IC Wilson descriptivo: 50,3–70,2%; extremos con indeterminados: 45,0–70,8%.
 - Bootstrap exploratorio por sesión: 47,0–72,1%.
 - La familia `Security Nightmares` concentra 73/120 casos.
+- Diagnóstico exploratorio al excluir una sesión: 58,5–63,5% entre resolubles.
+- La indeterminación por dificultad proxy va de 18,2% (baja) a 32,6% (alta); no se imputan resultados.
 
 ## Contenido del repositorio
 
-- `outputs/paper_auditoria_predicciones_cyber_v1.2.md`: manuscrito vigente.
-- `outputs/anexo_metodologico_y_trazabilidad_v1.2.md`: diseño de la capa derivada y trazabilidad.
+- `outputs/paper_auditoria_predicciones_cyber_v1.3.md`: manuscrito vigente.
+- `outputs/anexo_metodologico_y_trazabilidad_v1.3.md`: trazabilidad vigente.
+- `outputs/diagnosticos_adicionales_v1.3.md`: influencia por sesión, indeterminación y evidencia débil.
+- `outputs/protocolo_replica_prospectiva_v1.3.md`: diseño de una réplica con probabilidades y baselines preregistrados.
+- `outputs/auditoria_preapertura_repo_v1.3.md`: revisión previa de historial y logs, con límites explícitos.
+- `outputs/paper_auditoria_predicciones_cyber_v1.2.md`: manuscrito anterior preservado.
+- `outputs/anexo_metodologico_y_trazabilidad_v1.2.md`: anexo anterior preservado.
 - `outputs/analisis_robustez_y_representatividad_v1.2.md`: incertidumbre, referencias base, concentración, proxies y modelo.
 - `outputs/codebook_proxies_v1.2.md`: reglas exactas de especificidad y dificultad exploratorias.
 - `outputs/protocolo_preservacion_fuentes_v1.2.md`: niveles de preservación completos y pendientes.
@@ -40,6 +48,8 @@ Material de investigación para **“¿Acertaron los escenarios del futuro cyber
 - `work/metricas_robustez_v1.2.csv`: resultados numéricos y estado confirmatorio/exploratorio.
 - `work/inventario_fuentes_v1.2.csv`: 218 localizadores, claves y hashes de cápsulas textuales.
 - `work/registro_candidatos_excluidos_template_v1.2.csv`: esquema prospectivo; no imputa exclusiones pasadas.
+- `work/influencia_sesiones_v1.3.csv`: eliminación de cada sesión, una por vez.
+- `work/escenarios_indeterminados_v1.3.csv`: escenarios contrafactuales explícitos.
 - `site/`: fuente estática reproducible del sitio público, con explorador fila por fila.
 - `scripts/`: construcción del sitio y herramientas de doble codificación.
 
@@ -78,6 +88,6 @@ archivos temporales y copias locales de fuentes. La capa v1.2 añade un inventar
 de localizadores y hashes de las cápsulas textuales conservadas. No presenta esos
 hashes como copias de los recursos remotos.
 
-La publicación académica definitiva aún requiere que el autor elija licencia,
-visibilidad pública del repositorio y depósito con DOI. Esas decisiones no se
-infieren automáticamente porque cambian derechos y acceso.
+La publicación académica definitiva aún requiere depósito inmutable con DOI,
+y completar declaraciones editoriales. Abrir GitHub facilita la reproducción,
+pero no cambia el alojamiento: el sitio permanece en Cloudflare Pages.

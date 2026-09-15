@@ -75,7 +75,7 @@
     </section>
 
     <section id="robustez" class="band robustness">
-      <div class="eyebrow" data-es="ROBUSTEZ · ANÁLISIS v1.2" data-en="ROBUSTNESS · v1.2 ANALYSIS">ROBUSTEZ · ANÁLISIS v1.2</div>
+      <div class="eyebrow" data-es="ROBUSTEZ · ANÁLISIS v1.3" data-en="ROBUSTNESS · v1.3 ANALYSIS">ROBUSTEZ · ANÁLISIS v1.3</div>
       <h2 data-es="El 60,7% es un punto de partida, no un skill score." data-en="60.7% is a starting point, not a skill score.">El 60,7% es un punto de partida, no un <em>skill score</em>.</h2>
       <div class="robust-grid">
         <article><strong>45,0–70,8%</strong><span data-es="banda extrema al reasignar los 31 indeterminados" data-en="extreme band after reallocating 31 indeterminate cases">banda extrema al reasignar los 31 indeterminados</span></article>
@@ -84,6 +84,7 @@
         <article><strong>22,5</strong><span data-es="sesiones efectivas según concentración HHI" data-en="effective sessions under HHI concentration">sesiones efectivas según concentración HHI</span></article>
       </div>
       <p class="robust-note" data-es="Una regla trivial que clasifica todo como “cumplida” también obtiene 60,7% entre resolubles. Sin probabilidades ni alternativas, la tasa no demuestra discriminación. El proxy exploratorio de dificultad cae de 73,3% en casos bajos a 41,4% en altos." data-en="A trivial rule labeling everything fulfilled also gets 60.7% among resolvable cases. Without probabilities or alternatives, the rate does not demonstrate discrimination. The exploratory difficulty proxy falls from 73.3% in low cases to 41.4% in high cases.">Una regla trivial que clasifica todo como “cumplida” también obtiene 60,7% entre resolubles. Sin probabilidades ni alternativas, la tasa no demuestra discriminación. El proxy exploratorio de dificultad cae de 73,3% en casos bajos a 41,4% en altos.</p>
+      <p class="robust-note" data-es="Nuevo en v1.3: al excluir una sesión por vez, la tasa varía entre 58,5% y 63,5%. La indeterminación es heterogénea por dificultad y serie; no imputamos sus 31 desenlaces." data-en="New in v1.3: leaving out one session at a time gives rates from 58.5% to 63.5%. Indeterminacy varies by difficulty and series; we do not impute its 31 outcomes.">Nuevo en v1.3: al excluir una sesión por vez, la tasa varía entre 58,5% y 63,5%. La indeterminación es heterogénea por dificultad y serie; no imputamos sus 31 desenlaces.</p>
     </section>
 
     <section id="explorador" class="explorer band blue">
@@ -92,6 +93,7 @@
         <div><h2 data-es="Explora las 120 predicciones." data-en="Explore all 120 predictions.">Explora las 120 predicciones.</h2><p data-es="Busca por tema, ponente, clave o texto y filtra por resultado." data-en="Search by topic, speaker, key, or text and filter by result.">Busca por tema, ponente, clave o texto y filtra por resultado.</p></div>
         <a class="download" href="/work/evaluacion_desenlaces_v1.0.csv" download data-es="Descargar desenlaces CSV" data-en="Download outcomes CSV">Descargar desenlaces CSV</a>
       </div>
+      <p class="meta" data-es="Las citas literales de ponentes se muestran para auditoría; no están incluidas en la licencia CC BY 4.0 de los aportes originales. Consultá el alcance de derechos abajo." data-en="Speakers' verbatim quotes are shown for audit; they are not covered by the CC BY 4.0 license for original contributions. See the rights scope below.">Las citas literales de ponentes se muestran para auditoría; no están incluidas en la licencia CC BY 4.0 de los aportes originales. Consultá el alcance de derechos abajo.</p>
       <div class="controls">
         <label><span data-es="Buscar" data-en="Search">Buscar</span><input id="search" type="search" placeholder="Rowhammer, IPv6, speaker…"></label>
         <label><span data-es="Resultado" data-en="Outcome">Resultado</span><select id="judgment"><option value="" data-es="Todos" data-en="All">Todos</option><option value="fulfilled" data-es="Cumplida" data-en="Fulfilled">Cumplida</option><option value="not_fulfilled" data-es="Incumplida" data-en="Not fulfilled">Incumplida</option><option value="indeterminate" data-es="Indeterminada" data-en="Indeterminate">Indeterminada</option></select></label>
@@ -107,7 +109,7 @@
       <div class="eyebrow" data-es="DATOS Y DOCUMENTOS" data-en="DATA AND DOCUMENTS">DATOS Y DOCUMENTOS</div>
       <h2 data-es="La landing es una puerta de entrada, no un sustituto del registro." data-en="The landing page is a doorway, not a replacement for the record.">La landing es una puerta de entrada, no un sustituto del registro.</h2>
       <div class="doc-grid">
-        <a href="/paper.html"><strong data-es="Leer el paper v1.2" data-en="Read paper v1.2">Leer el paper v1.2</strong><span data-es="Incertidumbre, baselines, concentración y modelo exploratorio" data-en="Uncertainty, baselines, concentration, and exploratory model">Incertidumbre, baselines, concentración y modelo exploratorio</span></a>
+        <a href="/paper.html"><strong data-es="Leer el paper v1.3" data-en="Read paper v1.3">Leer el paper v1.3</strong><span data-es="Incertidumbre, baselines, influencia y evidencia" data-en="Uncertainty, baselines, influence, and evidence">Incertidumbre, baselines, influencia y evidencia</span></a>
         <a href="/appendix.html"><strong data-es="Abrir el anexo" data-en="Open the appendix">Abrir el anexo</strong><span data-es="Tablas derivadas y claves de casos" data-en="Derived tables and case keys">Tablas derivadas y claves de casos</span></a>
         <a href="/work/registro_extraccion_congelado_v1.0.csv" download><strong data-es="Corpus congelado" data-en="Frozen corpus">Corpus congelado</strong><span>CSV · SHA-256 323739E7…</span></a>
         <a href="/work/evaluacion_desenlaces_v1.0.csv" download><strong data-es="Evaluación de desenlaces" data-en="Outcome evaluation">Evaluación de desenlaces</strong><span>CSV · SHA-256 B3CE8AD4…</span></a>
@@ -115,10 +117,14 @@
         <a href="/documents/analisis_robustez_y_representatividad_v1.2.md"><strong data-es="Robustez y representatividad" data-en="Robustness and representativeness">Robustez y representatividad</strong><span data-es="Métodos, proxies y resultados reproducibles" data-en="Reproducible methods, proxies, and results">Métodos, proxies y resultados reproducibles</span></a>
         <a href="/work/analisis_derivado_v1.2.csv" download><strong data-es="Capa analítica v1.2" data-en="v1.2 analytical layer">Capa analítica v1.2</strong><span data-es="CSV derivado; los originales siguen intactos" data-en="Derived CSV; original records remain intact">CSV derivado; los originales siguen intactos</span></a>
         <a href="/work/inventario_fuentes_v1.2.csv" download><strong data-es="Inventario de fuentes" data-en="Source inventory">Inventario de fuentes</strong><span data-es="218 localizadores y hashes de cápsulas" data-en="218 locators and capsule hashes">218 localizadores y hashes de cápsulas</span></a>
+        <a href="/documents/diagnosticos_adicionales_v1.3.md"><strong data-es="Diagnósticos v1.3" data-en="v1.3 diagnostics">Diagnósticos v1.3</strong><span data-es="Influencia por sesión e indeterminación" data-en="Session influence and indeterminacy">Influencia por sesión e indeterminación</span></a>
+        <a href="/work/influencia_sesiones_v1.3.csv" download><strong data-es="Influencia de sesiones" data-en="Session influence">Influencia de sesiones</strong><span data-es="36 exclusiones una por vez; CSV derivado" data-en="36 leave-one-out deletions; derived CSV">36 exclusiones una por vez; CSV derivado</span></a>
+        <a href="/documents/protocolo_replica_prospectiva_v1.3.md"><strong data-es="Réplica prospectiva" data-en="Prospective replication">Réplica prospectiva</strong><span data-es="Probabilidades y baseline preregistrado" data-en="Probabilities and preregistered baseline">Probabilidades y baseline preregistrado</span></a>
+        <a href="/rights.html"><strong data-es="Licencias y derechos" data-en="Licenses and rights">Licencias y derechos</strong><span data-es="MIT / CC BY 4.0; citas de terceros excluidas" data-en="MIT / CC BY 4.0; third-party quotes excluded">MIT / CC BY 4.0; citas de terceros excluidas</span></a>
       </div>
     </section>
   </main>
 
-  <footer><span>Cyber Predictions Audit</span><span data-es="Versión 1.2 · septiembre de 2026" data-en="Version 1.2 · September 2026">Versión 1.2 · septiembre de 2026</span></footer>
+  <footer><span>Cyber Predictions Audit</span><span><a href="/rights.html" data-es="Licencias y derechos" data-en="Licenses and rights">Licencias y derechos</a> · <span data-es="Versión 1.3 · septiembre de 2026" data-en="Version 1.3 · September 2026">Versión 1.3 · septiembre de 2026</span></span></footer>
 </body>
 </html>
