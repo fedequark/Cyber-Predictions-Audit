@@ -74,6 +74,76 @@
   margin-top: 2rem;
 }
 
+.frame-section {
+  background: #eaf0ed;
+}
+
+.frame-section .section-head {
+  margin-top: 1rem;
+}
+
+.frame-controls {
+  display: grid;
+  grid-template-columns: minmax(0, 2fr) minmax(190px, 1fr);
+  gap: 1rem;
+  margin: 1.8rem 0 1rem;
+}
+
+.frame-controls label {
+  display: flex;
+  flex-direction: column;
+  gap: .35rem;
+  font-size: .8rem;
+  font-weight: 800;
+}
+
+.frame-controls input,
+.frame-controls select {
+  width: 100%;
+  border: 1px solid #9caeb2;
+  background: #fff;
+  color: var(--ink);
+  font: inherit;
+  padding: .8rem;
+}
+
+.frame-table-wrap {
+  max-height: 650px;
+  overflow: auto;
+  border: 1px solid var(--line);
+  background: #fff;
+}
+
+.frame-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: .85rem;
+}
+
+.frame-table th,
+.frame-table td {
+  padding: .72rem .8rem;
+  border-bottom: 1px solid var(--line);
+  text-align: left;
+  vertical-align: top;
+}
+
+.frame-table th {
+  position: sticky;
+  top: 0;
+  background: var(--ink);
+  color: #fff;
+}
+
+.frame-table td:first-child {
+  white-space: nowrap;
+  font-weight: 800;
+}
+
+.frame-table td:last-child {
+  color: var(--muted);
+}
+
 footer a {
   color: #dce4ec;
 }
@@ -163,8 +233,13 @@ footer a {
   }
 
   .controls,
-  .case-grid {
+  .case-grid,
+  .frame-controls {
     grid-template-columns: 1fr;
+  }
+
+  .frame-table {
+    min-width: 880px;
   }
 
   .robust-grid {

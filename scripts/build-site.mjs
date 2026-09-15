@@ -44,6 +44,10 @@ for (const name of [
   'tarjeta_pronostico_prospectivo_template_v1.4.csv',
   'alternativas_enlaces_fuentes_v1.4.csv',
   'seguimiento_enlaces_fuentes_v1.4a.csv',
+  'marco_maestro_189_sesiones_v0.9.csv',
+  'disponibilidad_blackhat_2005_2013_v0.2.csv',
+  'disponibilidad_blackhat_2014_2018_v0.2.csv',
+  'disponibilidad_vb_30_v0.5.csv',
 ]) {
   const source = join(root, 'work', name);
   const target = join(dist, 'work', name);

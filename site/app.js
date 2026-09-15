@@ -10,6 +10,9 @@ let visible = 12;
 let sourceChecks = new Map();
 let sourceAlternatives = new Map();
 let sourceCandidates = new Map();
+let frameRecords = [];
+let frameReasons = new Map();
+let frameVisible = 20;
 
 function parseCsv(text) {
   const rows = [];
@@ -121,6 +124,37 @@ function render() {
   document.querySelector('#cards').innerHTML = filtered.slice(0, visible).map(renderCard).join('');
   document.querySelector('#more').hidden = visible >= filtered.length;
 }
+function frameGradeLabel(grade) {
+  const names = {
+    S3: { es: 'S3 · fuente integral', en: 'S3 · full source' },
+    S1: { es: 'S1 · sólo metadatos', en: 'S1 · metadata only' },
+    pending_archive: { es: 'Archivo pendiente', en: 'Archive pending' },
+    pending_manual: { es: 'Revisión manual pendiente', en: 'Manual review pending' },
+    pending_paper: { es: 'Paper pendiente', en: 'Paper pending' },
+  };
+  return names[grade]?.[language] || grade;
+}
+function renderFrame() {
+  const q = document.querySelector('#frame-search').value.toLowerCase();
+  const grade = document.querySelector('#frame-grade').value;
+  const filtered = frameRecords.filter(row => (!grade || row.source_grade === grade) && (!q || `${row.frame_id} ${row.title} ${row.venue} ${row.year}`.toLowerCase().includes(q)));
+  document.querySelector('#frame-status').textContent = language === 'es'
+    ? `${filtered.length} ${filtered.length === 1 ? 'sesión encontrada' : 'sesiones encontradas'} de 189`
+    : `${filtered.length} ${filtered.length === 1 ? 'session found' : 'sessions found'} out of 189`;
+  document.querySelector('#frame-rows').innerHTML = filtered.slice(0, frameVisible).map(row => {
+    const audit = frameReasons.get(row.frame_id);
+    const reason = row.source_grade === 'S3'
+      ? (language === 'es' ? 'En el orden S3 congelado' : 'In the frozen S3 order')
+      : row.source_grade === 'S1'
+        ? (language === 'es' ? 'Sólo abstract/metadatos; fuente integral no recuperada' : 'Abstract/metadata only; full source not recovered')
+        : row.source_grade === 'pending_paper'
+          ? (language === 'es' ? 'Paper pendiente en el registro original; ver auditoría v1.5' : 'Paper pending in original record; see v1.5 audit')
+          : (audit?.reason || (language === 'es' ? 'Revisión documental pendiente' : 'Documentary review pending'));
+    const official = link(row.official_program_url, escapeHtml(row.frame_id));
+    return `<tr><td>${official || escapeHtml(row.frame_id)}</td><td>${escapeHtml(row.title)}</td><td>${escapeHtml(row.venue)} · ${escapeHtml(row.year)}</td><td>${escapeHtml(frameGradeLabel(row.source_grade))}</td><td>${escapeHtml(reason)}</td></tr>`;
+  }).join('');
+  document.querySelector('#frame-more').hidden = frameVisible >= filtered.length;
+}
 function setLanguage(lang) {
   language = lang;
   document.documentElement.lang = lang;
@@ -129,6 +163,7 @@ function setLanguage(lang) {
   document.querySelector('.big-number').innerHTML = lang === 'es' ? '60,7<span>%</span>' : '60.7<span>%</span>';
   document.title = lang === 'es' ? 'Cyber Predictions Audit — Auditoría retrospectiva' : 'Cyber Predictions Audit — Retrospective audit';
   render();
+  renderFrame();
 }
 async function loadCsv(path) {
   const response = await fetch(path);
@@ -137,7 +172,7 @@ async function loadCsv(path) {
 }
 async function load() {
   try {
-    const [extraction, outcomes, triage, operationalization, checks, alternatives, queue] = await Promise.all([
+    const [extraction, outcomes, triage, operationalization, checks, alternatives, queue, frame, bhEarly, bhLate, vb] = await Promise.all([
       loadCsv('/work/registro_extraccion_congelado_v1.0.csv'),
       loadCsv('/work/evaluacion_desenlaces_v1.0.csv'),
       loadCsv('/work/triage_evidencia_v1.4.csv'),
@@ -145,8 +180,15 @@ async function load() {
       loadCsv('/work/estado_enlaces_fuentes_2026-09-15.csv'),
       loadCsv('/work/alternativas_enlaces_fuentes_v1.4.csv'),
       loadCsv('/work/seguimiento_enlaces_fuentes_v1.4a.csv'),
+      loadCsv('/work/marco_maestro_189_sesiones_v0.9.csv'),
+      loadCsv('/work/disponibilidad_blackhat_2005_2013_v0.2.csv'),
+      loadCsv('/work/disponibilidad_blackhat_2014_2018_v0.2.csv'),
+      loadCsv('/work/disponibilidad_vb_30_v0.5.csv'),
     ]);
     if (extraction.length !== 120 || outcomes.length !== 120 || triage.length !== 120 || operationalization.length !== 120) throw Error('Corpus incompleto');
+    if (frame.length !== 189 || frame.filter(row => row.source_grade === 'S3').length !== 138 || new Set(frame.map(row => row.frame_id)).size !== 189) throw Error('Marco original incompleto');
+    frameRecords = frame;
+    frameReasons = new Map([...bhEarly, ...bhLate, ...vb].map(row => [row.frame_id, row]));
     sourceChecks = new Map(checks.map(row => [`${row.source_role}|${row.url}`, row]));
     sourceAlternatives = new Map(alternatives.map(row => [`${row.source_role}|${row.original_url}`, row]));
     sourceCandidates = new Map(queue.filter(row => row.publisher_candidate_url).map(row => [`${row.source_role}|${row.original_url}`, row]));
@@ -161,12 +203,16 @@ async function load() {
       return merged;
     });
     render();
+    renderFrame();
   } catch (error) {
     document.querySelector('#status').textContent = language === 'es' ? 'No se pudieron cargar los CSV. Usa las descargas de documentos.' : 'The CSV files could not be loaded. Use the document downloads.';
+    document.querySelector('#frame-status').textContent = language === 'es' ? 'No se pudo cargar el marco. Descarga el CSV original.' : 'Frame loading failed. Download the original CSV.';
   }
 }
 
 document.querySelectorAll('[data-lang]').forEach(button => button.addEventListener('click', () => setLanguage(button.dataset.lang)));
 ['search', 'judgment', 'strength', 'priority'].forEach(id => document.querySelector(`#${id}`).addEventListener('input', () => { visible = 12; render(); }));
+['frame-search', 'frame-grade'].forEach(id => document.querySelector(`#${id}`).addEventListener('input', () => { frameVisible = 20; renderFrame(); }));
+document.querySelector('#frame-more').addEventListener('click', () => { frameVisible += 20; renderFrame(); });
 document.querySelector('#more').addEventListener('click', () => { visible += 12; render(); });
 load();

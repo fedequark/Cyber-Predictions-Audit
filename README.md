@@ -4,7 +4,7 @@ Material de investigación para **“¿Acertaron los escenarios del futuro cyber
 
 - **Sitio público:** [cpa.federicopacheco.com](https://cpa.federicopacheco.com/)
 - **Alojamiento:** Cloudflare Pages (`cyber-predictions-audit`).
-- **Versión editorial vigente:** 1.4 (15 de septiembre de 2026)
+- **Versión editorial vigente:** 1.5 (15 de septiembre de 2026)
 - **Estado académico:** resultados cerrados; validación independiente pendiente.
 - **Citación:** metadatos listos en `CITATION.cff`; DOI pendiente de depósito público.
 - **Licencias:** MIT para software; CC BY 4.0 para aportes originales de investigación y base de datos. Las citas literales y recursos de terceros quedan excluidos; ver `RIGHTS.md`.
@@ -23,16 +23,20 @@ Material de investigación para **“¿Acertaron los escenarios del futuro cyber
 - Consulta de encabezados a 218 localizadores: 161 accesibles, 13 no encontrados, 23 bloqueados/limitados, 18 fallos de red y 3 otros errores. No se archivó contenido.
 - Siete predicciones usan `CCC-2013-034` frente a `CCC-2013-043` en el orden S3; orden y URL coinciden. Los originales no se corrigen silenciosamente.
 - Otra serie de siete casos (`CCC-2018-085`) usa una URL de predicción 404; el orden S3 contiene una alternativa oficial que responde 200. Se muestran ambos localizadores.
-- El marco de 189 sesiones tiene 51 no S3 sin registro individual publicado. La ampliación queda pendiente de su reconstrucción.
+- El marco maestro original de 189 sesiones ya está publicado y sus 138 IDs S3 coinciden con el orden congelado. Las 51 no S3 tienen registro individual: 29 archivo pendiente, 4 revisión manual pendiente, 17 paper pendiente y 1 S1 al corte original. Dos papers Virus Bulletin se recuperaron después; no se añaden retroactivamente al corpus.
 
 ## Contenido del repositorio
 
-- `outputs/paper_auditoria_predicciones_cyber_v1.4.md`: manuscrito vigente; integra la auditoría de evidencia y selección.
-- `outputs/anexo_metodologico_y_trazabilidad_v1.4.md`: trazabilidad vigente.
+- `outputs/paper_auditoria_predicciones_cyber_v1.5.md`: manuscrito vigente; corrige la procedencia del marco sin alterar desenlaces.
+- `outputs/anexo_metodologico_y_trazabilidad_v1.5.md`: trazabilidad vigente.
+- `outputs/recuperacion_marco_y_fuentes_v1.5.md`: 189 IDs originales y revisión focal de las 17 fuentes Virus Bulletin pendientes.
+- `outputs/paper_auditoria_predicciones_cyber_v1.4.md`: manuscrito anterior preservado, anterior a la recuperación del marco.
+- `outputs/anexo_metodologico_y_trazabilidad_v1.4.md`: anexo anterior preservado.
 - `outputs/auditoria_muestra_y_evidencia_v1.4.md`: triage de 120 casos y 138 sesiones S3.
 - `outputs/revision_disponibilidad_fuentes_2026-09-15.md`: foto de disponibilidad HTTP sin contenido remoto.
 - `outputs/auditoria_compromiso_y_operacionalizacion_v1.4.md`: mapa de revisión A/B y pistas modales.
-- `outputs/protocolo_ampliacion_estratificada_v1.4.md`: selección futura separada del corpus congelado.
+- `outputs/protocolo_ampliacion_estratificada_v1.5.md`: selección futura separada del corpus congelado, con marco original recuperado.
+- `outputs/protocolo_ampliacion_estratificada_v1.4.md`: diseño anterior preservado.
 - `outputs/protocolo_replica_prospectiva_operativo_v1.4.md`: tarjeta, baseline y puntuación listos, sin pronósticos reales.
 - `outputs/plan_deposito_doi_y_preregistro_v1.4.md`: plan de archivo con licencias mixtas; DOI no creado.
 - `outputs/nota_revision_focal_caso_p0_v1.4.md`: búsqueda inicial no exhaustiva del único fallo sin URL, sin recodificación.
@@ -66,7 +70,9 @@ Material de investigación para **“¿Acertaron los escenarios del futuro cyber
 - `work/escenarios_indeterminados_v1.3.csv`: escenarios contrafactuales explícitos.
 - `work/triage_evidencia_v1.4.csv`: prioridades de revisión por caso, sin recodificación.
 - `work/rendimiento_sesiones_s3_v1.4.csv`: productividad documental de las 138 sesiones S3.
-- `work/reconstruccion_marco_no_s3_template_v1.4.csv`: plantilla vacía para las 51 sesiones no enumeradas.
+- `work/marco_maestro_189_sesiones_v0.9.csv`: copia byte por byte del marco original recuperado (SHA-256 `A9C608FA24B54FFEE534500EBA46FEA1F9B4FB0C331B80C02EE6359762B68EDB`).
+- `work/disponibilidad_blackhat_2005_2013_v0.2.csv`, `work/disponibilidad_blackhat_2014_2018_v0.2.csv` y `work/disponibilidad_vb_30_v0.5.csv`: registros originales de calificación de fuente; copias exactas con hashes en la auditoría v1.5.
+- `work/reconstruccion_marco_no_s3_template_v1.4.csv`: plantilla vacía histórica, anterior al rescate; no es el inventario.
 - `work/estado_enlaces_fuentes_2026-09-15.csv`: resultado HTTP de 218 localizadores.
 - `work/revision_compromiso_y_operacionalizacion_v1.4.csv`: ficha de revisión semántica aún no completada.
 - `work/tarjeta_pronostico_prospectivo_template_v1.4.csv`: plantilla vacía de nuevos pronósticos.
@@ -82,7 +88,7 @@ Los hashes se calculan sobre los bytes canónicos publicados. El registro de ext
 npm run build:site
 ```
 
-Para regenerar los análisis deterministas v1.2–v1.4 y construir el sitio:
+Para regenerar los análisis deterministas v1.2–v1.4, verificar el marco v1.5 y construir el sitio:
 
 ```text
 npm run check:research

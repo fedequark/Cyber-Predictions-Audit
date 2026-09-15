@@ -10,3 +10,7 @@
 *.jsonc text eol=lf
 work/registro_extraccion_congelado_v1.0.csv -text
 work/orden_seleccion_s3_v0.2.csv -text
+work/marco_maestro_189_sesiones_v0.9.csv -text
+work/disponibilidad_blackhat_2005_2013_v0.2.csv -text
+work/disponibilidad_blackhat_2014_2018_v0.2.csv -text
+work/disponibilidad_vb_30_v0.5.csv -text
