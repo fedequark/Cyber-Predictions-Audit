@@ -34,6 +34,15 @@ outputs/*
 !outputs/diagnosticos_adicionales_v1.3.md
 !outputs/protocolo_replica_prospectiva_v1.3.md
 !outputs/auditoria_preapertura_repo_v1.3.md
+!outputs/paper_auditoria_predicciones_cyber_v1.4.md
+!outputs/anexo_metodologico_y_trazabilidad_v1.4.md
+!outputs/auditoria_muestra_y_evidencia_v1.4.md
+!outputs/revision_disponibilidad_fuentes_2026-09-15.md
+!outputs/protocolo_ampliacion_estratificada_v1.4.md
+!outputs/auditoria_compromiso_y_operacionalizacion_v1.4.md
+!outputs/protocolo_replica_prospectiva_operativo_v1.4.md
+!outputs/plan_deposito_doi_y_preregistro_v1.4.md
+!outputs/nota_revision_focal_caso_p0_v1.4.md
 
 !work/
 work/*
@@ -46,6 +55,13 @@ work/*
 !work/registro_candidatos_excluidos_template_v1.2.csv
 !work/influencia_sesiones_v1.3.csv
 !work/escenarios_indeterminados_v1.3.csv
+!work/triage_evidencia_v1.4.csv
+!work/rendimiento_sesiones_s3_v1.4.csv
+!work/reconstruccion_marco_no_s3_template_v1.4.csv
+!work/estado_enlaces_fuentes_2026-09-15.csv
+!work/revision_compromiso_y_operacionalizacion_v1.4.csv
+!work/tarjeta_pronostico_prospectivo_template_v1.4.csv
+!work/alternativas_enlaces_fuentes_v1.4.csv
 
 !scripts/
 scripts/*
@@ -54,6 +70,10 @@ scripts/*
 !scripts/calcular_acuerdo.py
 !scripts/analizar_robustez_v1_2.py
 !scripts/diagnosticos_adicionales_v1_3.py
+!scripts/auditar_evidencia_y_muestra_v1_4.py
+!scripts/comprobar_enlaces_fuentes_v1_4.py
+!scripts/auditar_operacionalizacion_v1_4.py
+!scripts/puntuar_replica_prospectiva_v1_4.py
 
 !site/
 site/*

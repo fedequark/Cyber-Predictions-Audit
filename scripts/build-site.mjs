@@ -36,6 +36,13 @@ for (const name of [
   'registro_candidatos_excluidos_template_v1.2.csv',
   'influencia_sesiones_v1.3.csv',
   'escenarios_indeterminados_v1.3.csv',
+  'triage_evidencia_v1.4.csv',
+  'rendimiento_sesiones_s3_v1.4.csv',
+  'reconstruccion_marco_no_s3_template_v1.4.csv',
+  'estado_enlaces_fuentes_2026-09-15.csv',
+  'revision_compromiso_y_operacionalizacion_v1.4.csv',
+  'tarjeta_pronostico_prospectivo_template_v1.4.csv',
+  'alternativas_enlaces_fuentes_v1.4.csv',
 ]) {
   const source = join(root, 'work', name);
   const target = join(dist, 'work', name);

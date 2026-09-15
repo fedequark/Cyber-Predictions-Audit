@@ -5,7 +5,7 @@ type: dataset
 authors:
   - family-names: Pacheco
     given-names: Federico
-version: "1.3"
+version: "1.4"
 date-released: 2026-09-15
 repository-code: "https://github.com/fedequark/Cyber-Predictions-Audit"
 url: "https://cpa.federicopacheco.com/"
