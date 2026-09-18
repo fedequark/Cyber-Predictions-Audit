@@ -48,6 +48,7 @@ for (const name of [
   'disponibilidad_blackhat_2005_2013_v0.2.csv',
   'disponibilidad_blackhat_2014_2018_v0.2.csv',
   'disponibilidad_vb_30_v0.5.csv',
+  'registro_rsac_2026_2028_v2.0.csv',
 ]) {
   const source = join(root, 'work', name);
   const target = join(dist, 'work', name);
