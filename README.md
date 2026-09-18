@@ -6,6 +6,7 @@ Material de investigación para **“¿Acertaron los escenarios del futuro cyber
 - **Alojamiento:** Cloudflare Pages (`cyber-predictions-audit`).
 - **Versión editorial vigente:** 1.5 (15 de septiembre de 2026)
 - **Estrategia editorial y de venues:** 1.7 (18 de septiembre de 2026)
+- **Narrativa y borrador RSAC:** 1.8 (18 de septiembre de 2026)
 - **Estado académico:** resultados cerrados; validación independiente pendiente.
 - **Citación:** metadatos listos en `CITATION.cff`; DOI pendiente de depósito público.
 - **Licencias:** MIT para software; CC BY 4.0 para aportes originales de investigación y base de datos. Las citas literales y recursos de terceros quedan excluidos; ver `RIGHTS.md`.
@@ -35,6 +36,7 @@ Material de investigación para **“¿Acertaron los escenarios del futuro cyber
 - `outputs/regla_cierre_y_revision_decks_v1.6.md`: regla multiformato de cierre, seis decks oficiales inspeccionados y divergencia entre título anunciado y charla real de VB2006.
 - `outputs/estrategia_research_y_venues_2027_v1.7.md`: diagnóstico de madurez, RQ revisadas, diferencia frente al prior art y estrategia para RSAC, Black Hat y DEF CON.
 - `outputs/brief_autoria_rsac_2027_v1.7.md`: banco factual, decisiones y checklist para que el autor redacte la propuesta RSAC 2027 con voz propia.
+- `outputs/narrativa_y_borrador_rsac_2027_v1.8.md`: motivación del autor, cinco casos extremos y borrador ajustado a los campos oficiales de RSAC.
 - `outputs/paper_auditoria_predicciones_cyber_v1.4.md`: manuscrito anterior preservado, anterior a la recuperación del marco.
 - `outputs/anexo_metodologico_y_trazabilidad_v1.4.md`: anexo anterior preservado.
 - `outputs/auditoria_muestra_y_evidencia_v1.4.md`: triage de 120 casos y 138 sesiones S3.
