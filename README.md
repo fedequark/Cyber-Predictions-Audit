@@ -6,7 +6,7 @@ Material de investigación para **“¿Acertaron los escenarios del futuro cyber
 - **Alojamiento:** Cloudflare Pages (`cyber-predictions-audit`).
 - **Versión editorial vigente:** 1.5 (15 de septiembre de 2026)
 - **Estrategia editorial y de venues:** 1.7 (18 de septiembre de 2026)
-- **Narrativa y borrador RSAC:** 1.8 (18 de septiembre de 2026)
+- **Narrativa y borrador RSAC:** 1.8; contraste RSAC y otros venues: 1.9 (18 de septiembre de 2026)
 - **Estado académico:** resultados cerrados; validación independiente pendiente.
 - **Citación:** metadatos listos en `CITATION.cff`; DOI pendiente de depósito público.
 - **Licencias:** MIT para software; CC BY 4.0 para aportes originales de investigación y base de datos. Las citas literales y recursos de terceros quedan excluidos; ver `RIGHTS.md`.
@@ -27,6 +27,7 @@ Material de investigación para **“¿Acertaron los escenarios del futuro cyber
 - Otra serie de siete casos (`CCC-2018-085`) usa una URL de predicción 404; el orden S3 contiene una alternativa oficial que responde 200. Se muestran ambos localizadores.
 - El marco maestro original de 189 sesiones ya está publicado y sus 138 IDs S3 coinciden con el orden congelado. Las 51 no S3 tienen registro individual: 29 archivo pendiente, 4 revisión manual pendiente, 17 paper pendiente y 1 S1 al corte original. Después se recuperaron dos papers Virus Bulletin y tres decks Black Hat S3; tres decks adicionales quedaron S2. No se añaden retroactivamente al corpus.
 - La revisión v1.7 identifica un antecedente empírico directo (Schatz y Bashroush, 2019), replantea las preguntas de investigación alrededor de auditabilidad y robustez, y separa las estrategias de RSAC, Black Hat y DEF CON.
+- La revisión v1.9 documenta tres aciertos asociados a RSAC con distinto valor informativo y un caso direccionalmente correcto pero fuera de plazo; no calcula una tasa por venue.
 
 ## Contenido del repositorio
 
@@ -37,6 +38,7 @@ Material de investigación para **“¿Acertaron los escenarios del futuro cyber
 - `outputs/estrategia_research_y_venues_2027_v1.7.md`: diagnóstico de madurez, RQ revisadas, diferencia frente al prior art y estrategia para RSAC, Black Hat y DEF CON.
 - `outputs/brief_autoria_rsac_2027_v1.7.md`: banco factual, decisiones y checklist para que el autor redacte la propuesta RSAC 2027 con voz propia.
 - `outputs/narrativa_y_borrador_rsac_2027_v1.8.md`: motivación del autor, cinco casos extremos y borrador ajustado a los campos oficiales de RSAC.
+- `outputs/contraste_rsac_y_venues_v1.9.md`: casos RSAC acertados, control negativo, contraste con otros venues y narrativa revisada para el CFP.
 - `outputs/paper_auditoria_predicciones_cyber_v1.4.md`: manuscrito anterior preservado, anterior a la recuperación del marco.
 - `outputs/anexo_metodologico_y_trazabilidad_v1.4.md`: anexo anterior preservado.
 - `outputs/auditoria_muestra_y_evidencia_v1.4.md`: triage de 120 casos y 138 sesiones S3.
