@@ -7,7 +7,7 @@ Material de investigación para **“¿Acertaron los escenarios del futuro cyber
 - **Borrador editorial vigente:** 1.6 (23 de septiembre de 2026), estudio de caso exploratorio sobre auditabilidad; la versión 1.5 se conserva.
 - **Estrategia editorial y de venues:** 1.7 (18 de septiembre de 2026)
 - **Propuesta RSAC vigente:** 2.0; contraste RSAC y otros venues: 1.9 (18 de septiembre de 2026)
-- **Estado académico:** resultados originales congelados; revisión focal del autor completada con apoyo de cuatro IAs; validación humana independiente pendiente. El sitio público aún no se actualizó al borrador 1.6.
+- **Estado académico:** resultados originales congelados; revisión focal del autor completada con apoyo de cuatro IAs; validación humana independiente pendiente. El sitio público presenta el borrador 1.6 y sus materiales de convalidación.
 - **Citación:** metadatos listos en `CITATION.cff`; DOI pendiente de depósito público.
 - **Licencias:** MIT para software; CC BY 4.0 para aportes originales de investigación y base de datos. Las citas literales y recursos de terceros quedan excluidos; ver `RIGHTS.md`.
 

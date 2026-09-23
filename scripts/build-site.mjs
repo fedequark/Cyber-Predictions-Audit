@@ -23,7 +23,9 @@ for (const name of await readdir(join(root, 'outputs'))) {
 
 for (const name of ['RIGHTS.md', 'LICENSE-DATA.md', 'LICENSE']) {
   const content = await readFile(join(root, name), 'utf8');
-  await writeFile(join(dist, 'documents', name), content.replace(/\r\n/g, '\n'), 'utf8');
+  const normalized = content.replace(/\r\n/g, '\n');
+  await writeFile(join(dist, 'documents', name), normalized, 'utf8');
+  await writeFile(join(dist, name), normalized, 'utf8');
 }
 
 for (const name of [
@@ -65,5 +67,10 @@ await cp(
   join(dist, 'documents', 'registro_extraccion_congelado_v1.0.csv'),
 );
 await cp(join(dist, 'work', 'evaluacion_desenlaces_v1.0.csv'), join(dist, 'documents', 'evaluacion_desenlaces_v1.0.csv'));
+await cp(
+  join(root, 'work', 'convalidacion_ia_v1.0'),
+  join(dist, 'work', 'convalidacion_ia_v1.0'),
+  { recursive: true },
+);
 
 console.log(`Sitio construido en ${dist}`);
