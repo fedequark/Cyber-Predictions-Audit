@@ -39,4 +39,7 @@ resuelve por sí sola la legalidad de cada reutilización en cada jurisdicción.
 > literales de ponentes quedan excluidas de esa licencia.
 
 Para una cita académica legible por gestores bibliográficos, usá
-`CITATION.cff`. El DOI sigue pendiente.
+`CITATION.cff`. Los registros publicados de Zenodo son
+`10.5281/zenodo.22339330` (inglés, versión 1.1) y
+`10.5281/zenodo.22341261` (español, versión 1.1); las versiones posteriores
+deben citarse con sus DOI específicos una vez publicados.

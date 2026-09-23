@@ -45,6 +45,8 @@ outputs/*
 !outputs/nota_revision_focal_caso_p0_v1.4.md
 !outputs/seguimiento_documental_v1.4a.md
 !outputs/paper_auditoria_predicciones_cyber_v1.5.md
+!outputs/paper_auditoria_predicciones_cyber_v1.6.md
+!outputs/nota_cambios_paper_v1.6.md
 !outputs/anexo_metodologico_y_trazabilidad_v1.5.md
 !outputs/recuperacion_marco_y_fuentes_v1.5.md
 !outputs/protocolo_ampliacion_estratificada_v1.5.md
@@ -76,6 +78,8 @@ work/*
 !work/disponibilidad_blackhat_2005_2013_v0.2.csv
 !work/disponibilidad_blackhat_2014_2018_v0.2.csv
 !work/disponibilidad_vb_30_v0.5.csv
+!work/convalidacion_ia_v1.0/
+!work/convalidacion_ia_v1.0/**
 
 !scripts/
 scripts/*
@@ -91,6 +95,12 @@ scripts/*
 !scripts/seguimiento_enlaces_v1_4a.py
 !scripts/importar_marco_original_v1_5.mjs
 !scripts/verificar_marco_v1_5.py
+!scripts/preparar_convalidacion_ia_v1_0.py
+!scripts/calcular_acuerdo_ias_v1_0.py
+!scripts/generar_envios_navegador_ia_v1_0.py
+!scripts/ejecutar_deepseek_convalidacion_v1_0.py
+!scripts/generar_revision_humana_ia_v1_0.py
+!scripts/traducir_revision_humana_ia_v1_0.py
 
 !site/
 site/*

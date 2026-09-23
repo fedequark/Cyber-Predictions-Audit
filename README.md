@@ -4,10 +4,10 @@ Material de investigación para **“¿Acertaron los escenarios del futuro cyber
 
 - **Sitio público:** [cpa.federicopacheco.com](https://cpa.federicopacheco.com/)
 - **Alojamiento:** Cloudflare Pages (`cyber-predictions-audit`).
-- **Versión editorial vigente:** 1.5 (15 de septiembre de 2026)
+- **Borrador editorial vigente:** 1.6 (23 de septiembre de 2026), estudio de caso exploratorio sobre auditabilidad; la versión 1.5 se conserva.
 - **Estrategia editorial y de venues:** 1.7 (18 de septiembre de 2026)
 - **Propuesta RSAC vigente:** 2.0; contraste RSAC y otros venues: 1.9 (18 de septiembre de 2026)
-- **Estado académico:** resultados cerrados; validación independiente pendiente.
+- **Estado académico:** resultados originales congelados; revisión focal del autor completada con apoyo de cuatro IAs; validación humana independiente pendiente. El sitio público aún no se actualizó al borrador 1.6.
 - **Citación:** metadatos listos en `CITATION.cff`; DOI pendiente de depósito público.
 - **Licencias:** MIT para software; CC BY 4.0 para aportes originales de investigación y base de datos. Las citas literales y recursos de terceros quedan excluidos; ver `RIGHTS.md`.
 
@@ -32,7 +32,10 @@ Material de investigación para **“¿Acertaron los escenarios del futuro cyber
 
 ## Contenido del repositorio
 
-- `outputs/paper_auditoria_predicciones_cyber_v1.5.md`: manuscrito vigente; corrige la procedencia del marco sin alterar desenlaces.
+- `outputs/paper_auditoria_predicciones_cyber_v1.6.md`: nuevo borrador exploratorio, con RQ metodológica posterior al análisis y divulgación explícita de Codex como codificador inicial.
+- `outputs/nota_cambios_paper_v1.6.md`: decisiones editoriales, procedencia y comprobaciones del reencuadre.
+- `work/convalidacion_ia_v1.0/CONCILIACION_REVISION_AUTOR_2026-09-23.md`: revisión focal del autor, seis desacuerdos de desenlace y límites de la evidencia.
+- `outputs/paper_auditoria_predicciones_cyber_v1.5.md`: manuscrito anterior preservado; corrige la procedencia del marco sin alterar desenlaces.
 - `outputs/anexo_metodologico_y_trazabilidad_v1.5.md`: trazabilidad vigente.
 - `outputs/recuperacion_marco_y_fuentes_v1.5.md`: 189 IDs originales y revisión focal de las 17 fuentes Virus Bulletin pendientes.
 - `outputs/regla_cierre_y_revision_decks_v1.6.md`: regla multiformato de cierre, seis decks oficiales inspeccionados y divergencia entre título anunciado y charla real de VB2006.
