@@ -1,0 +1,37 @@
+session_id,venue,session_title,n_predictions,n_fulfilled,n_not_fulfilled,n_indeterminate,n_remaining_resolvable,rate_without_session,change_percentage_points
+BHKEY-2015-01,Black Hat USA,The Lifecycle of a Revolution,1,0,1,0,88,0.613636363636,0.689479060266
+BHKEY-2017-01,Black Hat USA,Stepping Up Our Game: Re-focusing the Security Community on Defense and Making Security Work for Everyone,1,0,0,1,89,0.606741573034,0
+BHPRO-2005-01,Black Hat USA,The Future of Personal Information,1,0,1,0,88,0.613636363636,0.689479060266
+BHPRO-2012-03,Black Hat USA,The Myth of Twelve More Bytes: Security on the Post-Scarcity Internet,8,4,1,3,84,0.595238095238,-1.15034777956
+BHPRO-2014-03,Black Hat USA,Capstone: Next Generation Disassembly Framework,1,0,1,0,88,0.613636363636,0.689479060266
+CCC-2005-002,CCC,We lost the war,1,0,0,1,89,0.606741573034,0
+CCC-2005-006,CCC,Security Nightmares 2006,3,1,1,1,87,0.609195402299,0.245382926514
+CCC-2006-008,CCC,Vehicular Communication and VANETs,1,0,1,0,88,0.613636363636,0.689479060266
+CCC-2006-011,CCC,Security Nightmares 2007,7,2,3,2,84,0.619047619048,1.23060460139
+CCC-2007-012,CCC,VX,2,0,1,1,88,0.613636363636,0.689479060266
+CCC-2007-013,CCC,EU Policy on RFID & Privacy,2,0,2,0,87,0.620689655172,1.39480821387
+CCC-2007-014,CCC,Security Nightmares 2008,5,4,0,1,85,0.588235294118,-1.85062789161
+CCC-2008-019,CCC,Security Nightmares 2009,9,4,2,3,83,0.602409638554,-0.433193447949
+CCC-2009-021,CCC,Security Nightmares,5,2,1,2,86,0.604651162791,-0.209041024301
+CCC-2010-024,CCC,"Eins, zwei, drei - alle sind dabei",1,0,1,0,88,0.613636363636,0.689479060266
+CCC-2010-028,CCC,Security Nightmares,4,1,2,1,86,0.616279069767,0.953749673373
+CCC-2011-031,CCC,Security Nightmares,8,2,2,4,85,0.611764705882,0.502313284865
+CCC-2012-032,CCC,"Defend your Freedoms Online: It's Political, Stupid!",5,4,1,0,84,0.595238095238,-1.15034777956
+CCC-2012-033,CCC,Privacy and the Car of the Future,1,1,0,0,88,0.602272727273,-0.446884576098
+CCC-2012-034,CCC,Re-igniting the Crypto Wars on the Web,1,1,0,0,88,0.602272727273,-0.446884576098
+CCC-2012-037,CCC,Security Nightmares,3,2,0,1,87,0.597701149425,-0.904042360842
+CCC-2013-043,CCC,Security Nightmares,7,1,3,3,85,0.623529411765,1.6787838731
+CCC-2014-045,CCC,The automobile as massive data gathering source and the consequences for individual privacy,1,0,1,0,88,0.613636363636,0.689479060266
+CCC-2014-048,CCC,Security Nightmares,3,2,0,1,87,0.597701149425,-0.904042360842
+CCC-2015-056,CCC,Security Nightmares 0x10,5,4,1,0,84,0.595238095238,-1.15034777956
+CCC-2016-058,CCC,Recount 2016: An Uninvited Security Audit of the U.S. Presidential Election,1,1,0,0,88,0.602272727273,-0.446884576098
+CCC-2016-060,CCC,Security Nightmares 0x11,5,4,0,1,85,0.588235294118,-1.85062789161
+CCC-2017-061,CCC,"Dude, you broke the Future!",1,0,1,0,88,0.613636363636,0.689479060266
+CCC-2017-062,CCC,Gamified Control?,4,0,4,0,85,0.635294117647,2.85525446134
+CCC-2017-072,CCC,Fuck Dutch mass-surveillance: let's have a referendum!,1,1,0,0,88,0.602272727273,-0.446884576098
+CCC-2017-073,CCC,Security Nightmares 0x12,2,0,2,0,87,0.620689655172,1.39480821387
+CCC-2018-074,CCC,"""The"" Social Credit System",1,1,0,0,88,0.602272727273,-0.446884576098
+CCC-2018-076,CCC,Election Cybersecurity Progress Report,3,2,1,0,86,0.604651162791,-0.209041024301
+CCC-2018-085,CCC,Security Nightmares 0x13,7,4,0,3,85,0.588235294118,-1.85062789161
+VB-2015-P02,Virus Bulletin,POS fraud - trends and counter-actions to mass fraud,1,0,0,1,89,0.606741573034,0
+VB-2016-P01,Virus Bulletin,The Beginning of the End(point): Where we are now and where we'll be in five years,8,6,1,1,82,0.585365853659,-2.13757193752

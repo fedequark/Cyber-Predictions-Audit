@@ -1,0 +1,2 @@
+source_role,original_url,alternate_url,affected_session_id,affected_prediction_count,verification_basis,checked_date_utc,verification_state,notes
+prediction_source,https://media.ccc.de/v/35c3-10030-security_nightmares_0x13,https://media.ccc.de/v/35c3-9685-security_nightmares_0x13,CCC-2018-085,7,official_program_url_in_frozen_s3_order_same_title_and_year,2026-09-15,http_200_metadata_only,Alternative locator; source segment and original bytes not independently archived or rechecked
