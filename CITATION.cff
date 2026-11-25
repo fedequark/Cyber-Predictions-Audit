@@ -1,5 +1,5 @@
 cff-version: 1.2.0
-message: "Si utiliza este conjunto de datos o sus resultados, cite esta versión."
+message: "Esta cita identifica el conjunto de datos histórico. Para citar el análisis metodológico v2.0, utilice el DOI de la edición consultada que figura en references."
 title: "Cyber Predictions Audit: auditoría retrospectiva de predicciones explícitas en conferencias de ciberseguridad, 2005–2018"
 type: dataset
 authors:
@@ -9,6 +9,23 @@ version: "1.8"
 date-released: 2026-09-18
 repository-code: "https://github.com/fedequark/Cyber-Predictions-Audit"
 url: "https://cpa.federicopacheco.com/"
+references:
+  - type: report
+    title: "De predicciones públicas a desenlaces auditables"
+    authors:
+      - family-names: Pacheco
+        given-names: Federico
+    version: "2.0"
+    doi: "10.5281/zenodo.23342918"
+    date-released: 2026-10-13
+  - type: report
+    title: "From Public Predictions to Auditable Outcomes"
+    authors:
+      - family-names: Pacheco
+        given-names: Federico
+    version: "2.0"
+    doi: "10.5281/zenodo.23341844"
+    date-released: 2026-10-13
 abstract: >-
   Corpus auditable de 120 predicciones explícitas presentadas en conferencias de
   ciberseguridad entre 2005 y 2018, con evaluación retrospectiva de sus desenlaces,
